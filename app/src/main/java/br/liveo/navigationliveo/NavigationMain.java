@@ -102,8 +102,11 @@ public class NavigationMain extends ActionBarActivity{
 			break;			
 		case Constant.MENU_ROUTER:			
 			mFragment = new RouteFragment().newInstance(Utils.getTitleItem(NavigationMain.this, Constant.MENU_ROUTER));	
-			break;		
-		}
+			break;
+        case Constant.MENU_DELETE:
+             mFragment = new RouteFragment().newInstance(Utils.getTitleItem(NavigationMain.this, Constant.MENU_DELETE));
+             break;
+        }
 		
 		if (mFragment != null){
 			setTitleFragments(mLastPosition);

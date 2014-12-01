@@ -3,7 +3,7 @@ package br.liveo.utils;
 public class Constant {
 	
 	public static final String LAST_POSITION = "LAST_POSITION";	
-	public static final String TEXT_FRAGMENT = "TEXT_FRAGMENT"; 
+	public static final String TEXT_FRAGMENT = "TEXT_FRAGMENT";
 	
 	public static final int MENU_DOWNLOADS = 1; 	
 	public static final int MENU_ROUTER = 2;	
