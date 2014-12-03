@@ -23,7 +23,7 @@
             android:layout_gravity="start"
             android:background="@color/navigation_items"
             android:orientation="vertical" >
-
+<!--
             <LinearLayout
                 android:id="@+id/userContent"
                 android:layout_width="260dp"
@@ -77,13 +77,14 @@
                     </RelativeLayout>
                 </RelativeLayout>
             </LinearLayout>
-
+-->
             <View
                 android:id="@+id/viewSeparator"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"       
-                android:layout_below="@+id/userContent"         
+                android:layout_height="2dp"
                 android:background="@color/blue_dark" />
+                <!--android:layout_below="@+id/userContent"         -->
+
 
             <ListView
                 android:id="@+id/listDrawer"

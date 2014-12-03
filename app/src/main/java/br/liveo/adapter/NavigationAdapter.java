@@ -71,7 +71,7 @@ public class NavigationAdapter extends BaseAdapter {
 	
 	public void setDownloadsCounter(int count){
 		mDownloadsCounter = count;
-		mList.get(Constant.MENU_DOWNLOADS).counter = mDownloadsCounter;
+//		mList.get(Constant.MENU_DOWNLOADS).counter = mDownloadsCounter;
 		notifyDataSetChanged();
 	}
 

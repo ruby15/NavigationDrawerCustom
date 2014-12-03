@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="header">User</string>
+    <string name="app_name">Żelbet</string>
+    <string name="clear"></string>
+    <string name="add">Add</string>
+    <string name="delete">Delete</string>
+    <string name="done">Done</string>
+    <string name="discard">Discard</string>
+    <string name="search">Search</string>
+    <string name="update">Update</string>
+    <string name="drawer_open">Open drawer navigation</string>
+    <string name="drawer_close">Navigation drawer Close</string>
+
+    <!--Navigation Menu-->
+    <string-array name="nav_menu_items">
+        <item>Belka</item>
+        <item>Ścinanie</item>
+        <item>Zginanie</item>
+        <item>Ścinanie ze skręcaniem</item>
+        <item>Słup</item>
+        <item>Dwukierunkowe zginanie</item>
+        <item>Dwukierunkowe zginanie - Ekspertyza</item>
+        <item>Rozciąganie ze zginaniem</item>
+        <item>Ściana</item>
+        <item>Jednokierunkowe zginanie</item>
+        <item>Jednokierunkowe zginanie - Ekspertyza</item>
+        <item>Płyta</item>
+        <item>Przebicie</item>
+        <item>Przebicie PRO</item>
+        <item>Inne</item>
+        <item>Charakterystyki betonu</item>
+    </string-array>
+</resources>

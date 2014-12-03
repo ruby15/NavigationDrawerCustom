@@ -20,8 +20,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import br.liveo.adapter.NavigationAdapter;
-import br.liveo.fragments.DownloadFragment;
-import br.liveo.fragments.RouteFragment;
+import br.liveo.fragments.*;
 import br.liveo.utils.Constant;
 import br.liveo.utils.Menus;
 import br.liveo.utils.Utils;
@@ -42,7 +41,7 @@ public class NavigationMain extends ActionBarActivity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);		
-		getSupportActionBar().setIcon(R.drawable.ic_launcher);
+		getSupportActionBar().setIcon(R.drawable.rccalc_launcher);
 		
 		setContentView(R.layout.navigation_main);		
 		
@@ -54,7 +53,7 @@ public class NavigationMain extends ActionBarActivity{
 		mLayoutDrawer = (DrawerLayout) findViewById(R.id.layoutDrawer);	
 		
 		mUserDrawer = (RelativeLayout) findViewById(R.id.userDrawer);
-		mUserDrawer.setOnClickListener(userOnClick);
+//		mUserDrawer.setOnClickListener(userOnClick);
 		
 		if (mListDrawer != null) {
 
@@ -62,14 +61,16 @@ public class NavigationMain extends ActionBarActivity{
 			// listHeader.add(MENU POSITION)			
 			List<Integer> mListHeader = new ArrayList<Integer>();
 			mListHeader.add(0);
-			mListHeader.add(6);			
-			mListHeader.add(10);
+			mListHeader.add(4);
+            mListHeader.add(8);
+            mListHeader.add(11);
+            mListHeader.add(14);
 						
 			// All menus which will contain an accountant should be informed here
 			// Counter.put ("POSITION MENU", "VALUE COUNTER");			
 			SparseIntArray  mCounter = new SparseIntArray();			
-			mCounter.put(Constant.MENU_DOWNLOADS,7);
-			mCounter.put(Constant.MENU_MAPS,10);						
+//			mCounter.put(Constant.MENU_DOWNLOADS,1);
+//			mCounter.put(Constant.MENU_MAPS,10);
 			mNavigationAdapter = new NavigationAdapter(this, NavigationList.getNavigationAdapter(this, mListHeader, mCounter, null));
 		}
 		
@@ -97,15 +98,18 @@ public class NavigationMain extends ActionBarActivity{
 		mFragmentManager = getSupportFragmentManager();
 		
 		switch (posicao) {
-		case Constant.MENU_DOWNLOADS:			
-			mFragment = new DownloadFragment().newInstance(Utils.getTitleItem(NavigationMain.this, Constant.MENU_DOWNLOADS)); 
+		case Constant.MENU_Beam:
+			mFragment = new DownloadFragment().newInstance(Utils.getTitleItem(NavigationMain.this, Constant.MENU_Beam));
 			break;			
-		case Constant.MENU_ROUTER:			
-			mFragment = new RouteFragment().newInstance(Utils.getTitleItem(NavigationMain.this, Constant.MENU_ROUTER));	
+		case Constant.MENU_Shear:
+			mFragment = new RouteFragment().newInstance(Utils.getTitleItem(NavigationMain.this, Constant.MENU_Shear));
 			break;
-        case Constant.MENU_DELETE:
-             mFragment = new RouteFragment().newInstance(Utils.getTitleItem(NavigationMain.this, Constant.MENU_DELETE));
+        case Constant.MENU_Bending:
+             mFragment = new DeleteFragment().newInstance(Utils.getTitleItem(NavigationMain.this, Constant.MENU_Bending));
              break;
+        case Constant.MENU_Torsion:
+            mFragment = new DeleteFragment().newInstance(Utils.getTitleItem(NavigationMain.this, Constant.MENU_Torsion));
+            break;
         }
 		
 		if (mFragment != null){
@@ -121,13 +125,13 @@ public class NavigationMain extends ActionBarActivity{
         boolean drawerOpen = mLayoutDrawer.isDrawerOpen(mRelativeDrawer);    	
     	
         switch (posicao) {
-		case Constant.MENU_DOWNLOADS:        
+		case Constant.MENU_Beam:
 	        menu.findItem(Menus.ADD).setVisible(!drawerOpen);
 	        menu.findItem(Menus.UPDATE).setVisible(!drawerOpen);	        	        	       
 	        menu.findItem(Menus.SEARCH).setVisible(!drawerOpen);        
 			break;
 			
-		case Constant.MENU_ROUTER:
+		case Constant.MENU_Shear:
 	        menu.findItem(Menus.ADD).setVisible(!drawerOpen);	        	        	       
 	        menu.findItem(Menus.SEARCH).setVisible(!drawerOpen);        			
 			break;			
@@ -184,13 +188,13 @@ public class NavigationMain extends ActionBarActivity{
 	    mDrawerToggle.syncState();	
 	 }	
 	
-	public void setTitleActionBar(CharSequence informacao) {    	
-    	getSupportActionBar().setTitle(informacao);
-    }	
+//	public void setTitleActionBar(CharSequence title) {
+//    	getSupportActionBar().setTitle(title);
+//    }
 	
-	public void setSubtitleActionBar(CharSequence informacao) {    	
-    	getSupportActionBar().setSubtitle(informacao);
-    }	
+	public void setSubtitleActionBar(CharSequence title) {
+    	getSupportActionBar().setSubtitle(title);
+    }
 
 	public void setIconActionBar(int icon) {    	
     	getSupportActionBar().setIcon(icon);
@@ -239,11 +243,11 @@ public class NavigationMain extends ActionBarActivity{
         }
     }	
     
-	private OnClickListener userOnClick = new OnClickListener() {		
-		@Override
-		public void onClick(View v) {
-			// TODO Auto-generated method stub
-			mLayoutDrawer.closeDrawer(mRelativeDrawer);
-		}
-	};	
+//	private OnClickListener userOnClick = new OnClickListener() {
+//		@Override
+//		public void onClick(View v) {
+//			// TODO Auto-generated method stub
+//			mLayoutDrawer.closeDrawer(mRelativeDrawer);
+//		}
+//	};
 }

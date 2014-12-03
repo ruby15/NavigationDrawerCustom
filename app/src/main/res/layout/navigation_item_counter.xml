@@ -27,8 +27,9 @@
             android:textColor="@color/white"     
             android:layout_centerVertical="true"                        
             android:layout_toRightOf="@+id/icon"
-            android:text="@string/app_name" />        
+            />
         
+<!--
         <TextView
             android:id="@+id/counter"
             android:layout_width="40dp"
@@ -42,6 +43,18 @@
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold" />
+-->
+
+        <ImageView
+            android:id="@+id/iconLock"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="0dp"
+            android:src="@drawable/ic_action_lock_closed"/>
 
         <View
             android:id="@+id/viewNavigation"
