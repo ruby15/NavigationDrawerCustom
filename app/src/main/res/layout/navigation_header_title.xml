@@ -4,7 +4,13 @@
     android:layout_height="48dp"
     android:background="@color/navigation_items"
     android:gravity="center_vertical" >
-
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/clear"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"/>
     <TextView
         android:id="@+id/title"
         style="?android:attr/listSeparatorTextViewStyle"
@@ -18,14 +24,9 @@
         android:singleLine="true"
         android:text=""
         android:layout_toRightOf="@+id/icon"
-        android:textColor="@color/white" />
-    <ImageView
-        android:id="@+id/icon"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:contentDescription="@string/clear"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="15dp"/>
+        android:textColor="@color/white"
+        android:background="@color/navigation_items" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
@@ -34,29 +35,4 @@
         android:layout_marginTop="1dp"
         android:background="@color/gray"
         android:visibility="gone" />
-
-    <View
-        android:id="@+id/viewNavigation"
-        android:layout_width="8dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:visibility="gone"
-        android:background="@color/blue_dark" />
-
-    <TextView
-        android:id="@+id/counter"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rectangle_counter"
-        android:layout_centerVertical="true"
-        android:gravity="center"
-        android:padding="0dp"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:text="PRO"/>
-
 </RelativeLayout>

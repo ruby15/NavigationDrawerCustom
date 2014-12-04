@@ -106,7 +106,7 @@ public class NavigationAdapter extends BaseAdapter {
 			convertView = LayoutInflater.from(mcontext).inflate(layout, null);			
 			
 			holder.title = (TextView) convertView.findViewById(R.id.title);
-			holder.counter = (TextView) convertView.findViewById(R.id.counter);
+//			holder.counter = (TextView) convertView.findViewById(R.id.counter);
 			holder.icon = (ImageView) convertView.findViewById(R.id.icon);
 			holder.viewNavigation = (View) convertView.findViewById(R.id.viewNavigation);
 			
