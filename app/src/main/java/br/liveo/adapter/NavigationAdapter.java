@@ -83,7 +83,7 @@ public class NavigationAdapter extends BaseAdapter {
 	
 	class ViewHolder {
 		public TextView title;
-		public TextView counter;
+		public ImageView counter;
 		public ImageView icon;		
 		public LinearLayout colorLinear;
 		public View viewNavigation;
@@ -106,7 +106,7 @@ public class NavigationAdapter extends BaseAdapter {
 			convertView = LayoutInflater.from(mcontext).inflate(layout, null);			
 			
 			holder.title = (TextView) convertView.findViewById(R.id.title);
-//			holder.counter = (TextView) convertView.findViewById(R.id.counter);
+			holder.counter = (ImageView) convertView.findViewById(R.id.iconLock);
 			holder.icon = (ImageView) convertView.findViewById(R.id.icon);
 			holder.viewNavigation = (View) convertView.findViewById(R.id.viewNavigation);
 			
@@ -123,7 +123,7 @@ public class NavigationAdapter extends BaseAdapter {
 		if (holder.counter != null) {
 			if (item.counter >= 0) {
 				holder.counter.setVisibility(View.VISIBLE);
-				holder.counter.setText(item.counter + "");
+//				holder.counter.setText(item.counter + "");
 			} else {
 				holder.counter.setVisibility(View.GONE);
 			}
@@ -135,6 +135,7 @@ public class NavigationAdapter extends BaseAdapter {
 				holder.icon.setImageResource(item.icon);
 			} else {
 				holder.icon.setVisibility(View.GONE);
+//                holder.icon.setImageResource(R.drawable.ic_action_lock_open);
 			}
 		}
 	

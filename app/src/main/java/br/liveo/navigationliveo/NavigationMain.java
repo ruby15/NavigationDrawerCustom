@@ -41,7 +41,7 @@ public class NavigationMain extends ActionBarActivity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);		
-		getSupportActionBar().setIcon(R.drawable.rccalc_launcher);
+//		getSupportActionBar().setIcon(R.drawable.rccalc_launcher);
 		
 		setContentView(R.layout.navigation_main);		
 		
@@ -52,7 +52,7 @@ public class NavigationMain extends ActionBarActivity{
 		mRelativeDrawer = (RelativeLayout) findViewById(R.id.relativeDrawer);		
 		mLayoutDrawer = (DrawerLayout) findViewById(R.id.layoutDrawer);	
 		
-		mUserDrawer = (RelativeLayout) findViewById(R.id.userDrawer);
+//		mUserDrawer = (RelativeLayout) findViewById(R.id.userDrawer);
 //		mUserDrawer.setOnClickListener(userOnClick);
 		
 		if (mListDrawer != null) {
@@ -68,8 +68,8 @@ public class NavigationMain extends ActionBarActivity{
 						
 			// All menus which will contain an accountant should be informed here
 			// Counter.put ("POSITION MENU", "VALUE COUNTER");			
-			SparseIntArray  mCounter = new SparseIntArray();			
-//			mCounter.put(Constant.MENU_DOWNLOADS,1);
+			SparseIntArray  mCounter = new SparseIntArray();
+			mCounter.put(Constant.MENU_Beam,1);
 //			mCounter.put(Constant.MENU_MAPS,10);
 			mNavigationAdapter = new NavigationAdapter(this, NavigationList.getNavigationAdapter(this, mListHeader, mCounter, null));
 		}
@@ -84,7 +84,7 @@ public class NavigationMain extends ActionBarActivity{
 			setLastPosition(savedInstanceState.getInt(Constant.LAST_POSITION));
 			
 			setTitleFragments(mLastPosition);			
-			mNavigationAdapter.resetarCheck();		
+			mNavigationAdapter.resetarCheck();
 			mNavigationAdapter.setChecked(mLastPosition, true);							
 	    }else{
 	    	setLastPosition(mLastPosition); 
