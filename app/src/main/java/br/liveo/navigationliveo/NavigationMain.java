@@ -197,7 +197,7 @@ public class NavigationMain extends ActionBarActivity{
     }
 
 	public void setIconActionBar(int icon) {    	
-    	getSupportActionBar().setIcon(icon);
+    	getSupportActionBar().setIcon(R.drawable.rccalc_launcher);
     }	
 	
 	public void setLastPosition(int posicao){		
