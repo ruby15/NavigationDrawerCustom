@@ -69,7 +69,7 @@ public class NavigationMain extends ActionBarActivity{
 			// All menus which will contain an accountant should be informed here
 			// Counter.put ("POSITION MENU", "VALUE COUNTER");			
 			SparseIntArray  mCounter = new SparseIntArray();
-			mCounter.put(Constant.MENU_Beam,1);
+			mCounter.put(Constant.MENU_Shear,1);
 //			mCounter.put(Constant.MENU_MAPS,10);
 			mNavigationAdapter = new NavigationAdapter(this, NavigationList.getNavigationAdapter(this, mListHeader, mCounter, null));
 		}

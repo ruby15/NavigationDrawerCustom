@@ -125,7 +125,8 @@ public class NavigationAdapter extends BaseAdapter {
 				holder.counter.setVisibility(View.VISIBLE);
 //				holder.counter.setText(item.counter + "");
 			} else {
-				holder.counter.setVisibility(View.GONE);
+//				holder.counter.setVisibility(View.GONE);
+                holder.counter.setImageResource(R.drawable.ic_action_lock_open);
 			}
 		}
 		
